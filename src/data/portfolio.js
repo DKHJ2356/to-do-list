@@ -1,77 +1,30 @@
 export const personalInfo = {
   name: 'Domingo',
-  headline: 'IT Developer & Database Engineer',
-  bio: 'Software Engineer based in Dhaka, Bangladesh. I build and maintain systems, manage databases, and craft web experiences. Currently an IT Developer at Eastandart BD and Database Manager at Love2Learn Sign Language.',
+  statement: 'Do you qualify?',
+  substatement: 'Fullstack. Architecture to deployment.',
   email: 'domingo@eastandart.com',
   github: 'https://github.com/DKHJ2356',
-  linkedin: 'https://www.linkedin.com/in/',
   location: 'Dhaka, Bangladesh',
 };
 
-export const experience = [
+export const buildProcess = [
   {
-    id: 1,
-    role: 'Information Technology Developer',
-    company: 'Eastandart BD',
-    type: 'Part-time · On-site',
-    period: 'Apr 2026 – Present',
-    duration: '3 months',
-    location: 'Dhaka, Bangladesh',
-    description:
-      'Software Engineer involved in system development and implementation. Responsible for IT management, infrastructure oversight, security practices, and quality assurance across company systems.',
-    skills: [
-      'IT Management',
-      'System Development',
-      'IT Development',
-      'Infrastructure Management',
-      'Security',
-      'Quality Assurance',
-      'System Implementations',
-      'Database',
-    ],
+    step: '01',
+    title: 'Architecture first',
+    body: 'Before a line of code, I diagram the system — data flow, service boundaries, failure modes. The code is just the architecture made executable.',
+    proof: ['Supabase', 'PostgreSQL', 'REST', 'Auth'],
   },
   {
-    id: 2,
-    role: 'Database Manager',
-    company: 'Love2Learn Sign Language',
-    type: 'Contract · Remote',
-    period: 'Dec 2025 – Present',
-    duration: '7 months',
-    location: 'Bangladesh',
-    description:
-      'Managing the database for the Love to Learn Sign Language app on Google Play — adding new words, verifying data accuracy, correcting entries, and translating content to keep the app up-to-date.',
-    skills: ['Database Administration', 'Google Sheets', 'Database', 'Translation'],
-  },
-];
-
-export const skillGroups = [
-  {
-    category: 'IT & Systems',
-    skills: [
-      'IT Management',
-      'System Development',
-      'IT Development',
-      'Infrastructure Management',
-      'System Implementations',
-    ],
+    step: '02',
+    title: 'Backend owns the contract',
+    body: 'API schema, database schema, and auth logic are locked before the first component renders. The frontend is a consumer, not a negotiator.',
+    proof: ['Node.js', 'Next.js API', 'Edge Functions', 'RLS'],
   },
   {
-    category: 'Data & Quality',
-    skills: [
-      'Database Administration',
-      'Database',
-      'Google Sheets',
-      'Quality Assurance',
-      'Security',
-    ],
-  },
-  {
-    category: 'Web Development',
-    skills: ['React', 'Next.js', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite'],
-  },
-  {
-    category: 'Tools & Other',
-    skills: ['Git', 'GitHub', 'Translation', 'Google Workspace'],
+    step: '03',
+    title: 'Frontend ships the proof',
+    body: 'UI is the architecture made visible. Every component maps to a backend decision already made. No guessing at the data layer.',
+    proof: ['React', 'TypeScript', 'Tailwind', 'Vite'],
   },
 ];
 
@@ -79,9 +32,8 @@ export const projects = [
   {
     id: 1,
     name: 'EASTANDARTBD',
-    description:
-      'Full website for Eastandart BD — a TypeScript-powered platform showcasing the brand\'s digital presence, built with a modern React stack.',
-    tech: ['TypeScript', 'React', 'Next.js'],
+    stack: ['TypeScript', 'Next.js', 'React'],
+    decision: 'Chose static generation over server rendering — 3× faster load, acceptable staleness for a brand site with low update frequency.',
     url: 'https://github.com/DKHJ2356/EASTANDARTBD',
     isPrivate: false,
     year: '2026',
@@ -89,9 +41,8 @@ export const projects = [
   {
     id: 2,
     name: 'Bijoux Demo Site',
-    description:
-      'Demo and testing site for the BIJOUX brand. Focused on UI/UX exploration, interactive prototyping, and front-end development.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
+    stack: ['JavaScript', 'HTML', 'CSS'],
+    decision: 'No framework — vanilla JS state machine for a 5-page prototype. Framework overhead would have doubled the bundle for zero gain.',
     url: 'https://github.com/DKHJ2356/bijoux-demo-site',
     isPrivate: true,
     year: '2026',
@@ -99,9 +50,8 @@ export const projects = [
   {
     id: 3,
     name: 'To-Do List App',
-    description:
-      'A task management web application built with Next.js — exploring full-stack development with modern React patterns.',
-    tech: ['Next.js', 'React', 'JavaScript'],
+    stack: ['Next.js', 'React', 'JavaScript'],
+    decision: 'Server components for data fetching — eliminated client-side loading states entirely. UI renders with data or not at all.',
     url: 'https://github.com/DKHJ2356/to-do-list',
     isPrivate: false,
     year: '2026',
