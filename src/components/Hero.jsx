@@ -105,7 +105,7 @@ export default function Hero() {
     .to(rightRef.current, { x: '8vw', duration: 0.8, ease: 'power3.inOut' }, '<')
 
     /* 3 — hold */
-    .addPause('+=0.4')
+    .to({}, { duration: 0.4 })
 
     /* 4 — seal back */
     .to(leftRef.current, { x: 0, duration: 0.7, ease: 'power3.inOut' })

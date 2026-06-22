@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Github } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -79,16 +79,30 @@ export default function GitHubCTA() {
           and you're still reading — you probably qualify.
         </p>
 
-        <a
-          ref={btnRef}
-          href={personalInfo.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-qualify inline-flex"
-        >
-          <Github size={16} />
-          github.com/DKHJ2356
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a
+            ref={btnRef}
+            href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-qualify inline-flex"
+          >
+            <Github size={16} />
+            github.com/DKHJ2356
+          </a>
+          <a
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-mono-custom text-xs flex items-center gap-2 transition-colors"
+            style={{ color: 'var(--color-muted)' }}
+            onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'}
+            onMouseLeave={e => e.currentTarget.style.color = 'var(--color-muted)'}
+          >
+            <Linkedin size={13} />
+            LinkedIn
+          </a>
+        </div>
       </div>
     </section>
   );

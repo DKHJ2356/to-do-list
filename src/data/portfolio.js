@@ -2,8 +2,9 @@ export const personalInfo = {
   name: 'Domingo',
   statement: 'Do you qualify?',
   substatement: 'Fullstack. Architecture to deployment.',
-  email: 'domingo@eastandart.com',
+  email: 'domingokafil2003@gmail.com',
   github: 'https://github.com/DKHJ2356',
+  linkedin: 'https://www.linkedin.com/in/domingo-hossain-jallaza-6420a419b',
   location: 'Dhaka, Bangladesh',
 };
 
