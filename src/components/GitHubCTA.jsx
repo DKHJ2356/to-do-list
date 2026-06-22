@@ -94,7 +94,7 @@ export default function GitHubCTA() {
             href={personalInfo.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono-custom text-xs flex items-center gap-2 transition-colors"
+            className="font-mono-custom text-xs flex items-center gap-2 transition-colors mt-6 sm:mt-0"
             style={{ color: 'var(--color-muted)' }}
             onMouseEnter={e => e.currentTarget.style.color = 'var(--color-accent)'}
             onMouseLeave={e => e.currentTarget.style.color = 'var(--color-muted)'}
